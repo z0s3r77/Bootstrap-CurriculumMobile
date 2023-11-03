@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <title>Descripción</title>
+</head>
+<body class="bg-grey">
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand pt-4 font-weight-bold pl-3 animate__animated animate__fadeInLeft" href="#">Titulo</a>
+    <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler border-0 pt-4 pr-4 animate__animated animate__fadeInRight"
+            data-target="#navbarNavDropdown" data-toggle="collapse" id="toggleButton"
+            type="button">
+        <span class="navbar-toggler-icon" id="toggleIcon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse pl-3 pt-3" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="description.html">Descripción</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="experiencia.html">Experiencia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="estudios.html">Estudios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portafolio.html">Portafolio</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div>
+
+</div>
+<script>
+    // Obtén una referencia al botón y al span
+    const toggleButton = document.getElementById('toggleButton');
+    const toggleIcon = document.getElementById('toggleIcon');
+
+    // Agrega un manejador de eventos para el clic en el botón
+    toggleButton.addEventListener('click', function () {
+        // Verifica el estado actual del span
+        if (toggleIcon.classList.contains('navbar-toggler-icon')) {
+            // Si el span tiene la clase 'navbar-toggler-icon', cámbiala
+            toggleIcon.classList.remove('navbar-toggler-icon');
+            // Puedes agregar otro ícono o texto al span
+            toggleIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">\n' +
+                '  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>\n' +
+                '</svg>'; // Ícono "X" más grande
+        } else {
+            toggleIcon.innerHTML = '';
+
+            // Si el span no tiene la clase 'navbar-toggler-icon', restablécela
+            toggleButton.click();
+
+            toggleIcon.classList.add('navbar-toggler-icon');
+            // Puedes restaurar el ícono original
+        }
+    });
+
+
+</script>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/popper.js/dist/umd/popper.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <title>Estudios</title>
+</head>
+<body class="bg-grey">
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand pt-4 font-weight-bold pl-3 animate__animated animate__fadeInLeft" href="#">Estudios</a>
+    <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler border-0 pt-4 pr-4 animate__animated animate__fadeInRight"
+            data-target="#navbarNavDropdown" data-toggle="collapse" id="toggleButton"
+            type="button">
+        <span class="navbar-toggler-icon" id="toggleIcon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse pl-3 pt-3" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="description.html">Descripción</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="experiencia.html">Experiencia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active " href="estudios.html">Estudios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portafolio.html">Portafolio</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container pt-4">
+    <div class="d-flex d-inline justify-content-around mx-5 animate__animated animate__fadeInLeft">
+        <p id="reglado">Reglado</p>
+        <p>/</p>
+        <p id="noReglado">No Reglado</p>
+    </div>
+
+    <div id="regladoDiv">
+        <div class="card mt-1 shadow-lg  animate__animated animate__fadeInLeft">
+            <div class="card-body">
+                <h5 class="card-title">Reglados</h5>
+                <p class="card-text">Soy Geoge Higman, un desarrollador web apasionado por crear experiencias digitales
+                    innovadoras. Me encanta resolver problemas y mantenerme actualizado con las últimas tendencias para
+                    construir la web del futuro. La programación es mi pasión y mi vocación.</p>
+            </div>
+        </div>    </div>
+    <div id="noRegladoDiv" class="hidden">
+        <div class="card mt-1 shadow-lg  animate__animated animate__fadeInRight">
+            <div class="card-body">
+                <h5 class="card-title">No Reglados</h5>
+                <p class="card-text">Soy Geoge Higman, un desarrollador web apasionado por crear experiencias digitales
+                    innovadoras. Me encanta resolver problemas y mantenerme actualizado con las últimas tendencias para
+                    construir la web del futuro. La programación es mi pasión y mi vocación.</p>
+            </div>
+        </div>    </div>
+</div>
+<script>
+    const regladoButton = document.getElementById("reglado");
+    const noRegladoButton = document.getElementById("noReglado");
+    const regladoDiv = document.getElementById("regladoDiv");
+    const noRegladoDiv = document.getElementById("noRegladoDiv");
+
+    regladoButton.addEventListener("click", function() {
+        regladoDiv.style.display = "block";
+        noRegladoDiv.style.display = "none";
+    });
+
+    noRegladoButton.addEventListener("click", function() {
+        noRegladoDiv.style.display = "block";
+        regladoDiv.style.display = "none";
+    });
+</script>
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+    const toggleIcon = document.getElementById('toggleIcon');
+
+    toggleButton.addEventListener('click', function () {
+
+        if (toggleIcon.classList.contains('navbar-toggler-icon')) {
+
+            toggleIcon.classList.remove('navbar-toggler-icon');
+            toggleIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">\n' +
+                '  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>\n' +
+                '</svg>'; 
+        } else {
+            toggleIcon.innerHTML = '';
+            toggleButton.click();
+
+            toggleIcon.classList.add('navbar-toggler-icon');
+        }
+    });
+
+
+</script>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/popper.js/dist/umd/popper.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
