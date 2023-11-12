@@ -9,9 +9,10 @@
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
     <title>Descripción</title>
 </head>
-<body class="bg-grey">
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand pt-4 font-weight-bold pl-3 animate__animated animate__fadeInLeft" href="#">Titulo</a>
@@ -49,11 +50,9 @@
 
 </div>
 <script>
-    // Obtén una referencia al botón y al span
     const toggleButton = document.getElementById('toggleButton');
     const toggleIcon = document.getElementById('toggleIcon');
 
-    // Agrega un manejador de eventos para el clic en el botón
     toggleButton.addEventListener('click', function () {
         // Verifica el estado actual del span
         if (toggleIcon.classList.contains('navbar-toggler-icon')) {

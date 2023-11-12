@@ -9,9 +9,10 @@
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
     <title>Home</title>
 </head>
-<body class="bg-grey">
+<body >
 
 <nav class="pt-3 navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand pt-4 font-weight-bold pl-3 animate__animated animate__fadeInLeft" href="#">Inicio</a>
@@ -21,7 +22,6 @@
             type="button">
         <span class="navbar-toggler-icon" id="toggleIcon"></span>
     </button>
-
     <div class="collapse navbar-collapse pl-3 pt-3" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item active">
@@ -45,30 +45,25 @@
         </ul>
     </div>
 </nav>
-<div id="container">
+<div id="container" class="pt-4">
     <div class="d-flex justify-content-center align-items-center animate__animated animate__fadeIn" id="Hero">
-        <div class="container text-center pt-5">
+        <div class="container text-center py-4">
             <img alt="George Image" class="rounded-circle shadow-lg" src="./images/george.jpg">
-            <h1 class="pt-4">George Higman</h1>
-            <p><i class="text">Lorem Ipsum ipsum lorem George Heroku</i></p>
+            <h1 class="pt-5">George Higman</h1>
+            <p class="m-4"><i>¡Hola! Soy un apasionado desarrollador web que transforma ideas en experiencias digitales sorprendentes. Fusiono creatividad y código para construir el futuro en línea. Únete a mi viaje, donde cada línea de código cuenta una historia y cada proyecto es una nueva aventura. 🚀 #DesarrolloWeb #CódigoCreativo #ForjandoElFuturoDigital</i></p>
         </div>
     </div>
 </div>
 <script>
-    // Obtén una referencia al botón y al span
     const toggleButton = document.getElementById('toggleButton');
     const toggleIcon = document.getElementById('toggleIcon');
 
-    // Agrega un manejador de eventos para el clic en el botón
     toggleButton.addEventListener('click', function () {
-        // Verifica el estado actual del span
         if (toggleIcon.classList.contains('navbar-toggler-icon')) {
-            // Si el span tiene la clase 'navbar-toggler-icon', cámbiala
             toggleIcon.classList.remove('navbar-toggler-icon');
-            // Puedes agregar otro ícono o texto al span
             toggleIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">\n' +
                 '  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>\n' +
-                '</svg>'; // Ícono "X" más grande
+                '</svg>'; 
         } else {
             toggleIcon.innerHTML = '';
 
