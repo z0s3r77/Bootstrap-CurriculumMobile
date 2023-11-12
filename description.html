@@ -61,14 +61,17 @@
             <div class="card mt-1 shadow-lg  animate__animated animate__fadeIn mx-4">
                 <div class="card-body rounded-lg ">
                     <h5 class="card-title">Todo sobre mí</h5>
-                    <p class="card-text">Como te comenté anteriormente, soy un <b>desarrollador web</b> apasionado por crear experiencias
+                    <p class="card-text">Como te comenté anteriormente, soy un <b>desarrollador web</b> apasionado por
+                        crear experiencias
                         digitales
                         innovadoras. Me encanta resolver problemas y mantenerme actualizado con las últimas tendencias
                         para
                         construir la web del futuro. La programación es mi <b>pasión</b> y mi <b>vocación</b>.</p>
                     <p>
-                        Con habilidades afiladas en tecnologías de vanguardia, como <i><a href="react.com" class="link-underline-dark">React</a></i> para construir interfaces
-                        interactivas, y un toque maestro en el diseño con <i>CSS</i> (<a href="https://tailwindcss.com/" class="link-underline-dark">TailwindCss</a>), he moldeado el frente digital de
+                        Con habilidades afiladas en tecnologías de vanguardia, como <i><a href="react.com"
+                                class="link-underline-dark">React</a></i> para construir interfaces
+                        interactivas, y un toque maestro en el diseño con <i>CSS</i> (<a href="https://tailwindcss.com/"
+                            class="link-underline-dark">TailwindCss</a>), he moldeado el frente digital de
                         proyectos con innovación y estilo.
 
                     </p>
@@ -83,28 +86,22 @@
         </div>
     </div>
     <script>
-        // Obtén una referencia al botón y al span
+
         const toggleButton = document.getElementById('toggleButton');
         const toggleIcon = document.getElementById('toggleIcon');
 
-        // Agrega un manejador de eventos para el clic en el botón
         toggleButton.addEventListener('click', function () {
-            // Verifica el estado actual del span
             if (toggleIcon.classList.contains('navbar-toggler-icon')) {
-                // Si el span tiene la clase 'navbar-toggler-icon', cámbiala
                 toggleIcon.classList.remove('navbar-toggler-icon');
-                // Puedes agregar otro ícono o texto al span
                 toggleIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">\n' +
                     '  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>\n' +
-                    '</svg>'; // Ícono "X" más grande
+                    '</svg>';
             } else {
                 toggleIcon.innerHTML = '';
 
-                // Si el span no tiene la clase 'navbar-toggler-icon', restablécela
                 toggleButton.click();
 
                 toggleIcon.classList.add('navbar-toggler-icon');
-                // Puedes restaurar el ícono original
             }
         });
 

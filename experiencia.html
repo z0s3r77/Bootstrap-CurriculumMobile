@@ -74,7 +74,9 @@
             <p><b>Años:</b> <i>2020 - 2021</i></p>
             <div>
               <p><b>Descripción:</b></p>
-              <p class="card-text text-justify ">Administrador de Sistemas con experiencia en Microsoft, especializado en la gestión eficiente de infraestructuras tecnológicas. Destacado por su contribución al rendimiento y seguridad de sistemas operativos Windows. Proactivo y orientado a resultados.</p>
+              <p class="card-text text-justify ">Administrador de Sistemas con experiencia en Microsoft, especializado
+                en la gestión eficiente de infraestructuras tecnológicas. Destacado por su contribución al rendimiento y
+                seguridad de sistemas operativos Windows. Proactivo y orientado a resultados.</p>
             </div>
           </div>
         </div>
@@ -90,7 +92,9 @@
             <p><b>Años:</b> <i>2021 - 2022</i></p>
             <div>
               <p><b>Descripción:</b></p>
-              <p class="card-text text-justify ">Ingeniero de Datos en Google, liderando proyectos clave de manejo y optimización de bases de datos a escala global. Innovador en la implementación de soluciones eficientes para asegurar la integridad y accesibilidad de los datos en la infraestructura de Google.</p>
+              <p class="card-text text-justify ">Ingeniero de Datos en Google, liderando proyectos clave de manejo y
+                optimización de bases de datos a escala global. Innovador en la implementación de soluciones eficientes
+                para asegurar la integridad y accesibilidad de los datos en la infraestructura de Google.</p>
             </div>
           </div>
         </div>
@@ -106,7 +110,9 @@
             <p><b>Años:</b> <i>2022 - ACTUAL</i></p>
             <div>
               <p><b>Descripción:</b></p>
-              <p class="card-text text-justify ">Desarrollador Front-end en Apple, contribuyendo al diseño y desarrollo de experiencias de usuario excepcionales. Especializado en el uso de tecnologías modernas como React y CSS para crear interfaces visuales innovadoras en proyectos internos y externos de la empresa.</p>
+              <p class="card-text text-justify ">Desarrollador Front-end en Apple, contribuyendo al diseño y desarrollo
+                de experiencias de usuario excepcionales. Especializado en el uso de tecnologías modernas como React y
+                CSS para crear interfaces visuales innovadoras en proyectos internos y externos de la empresa.</p>
             </div>
           </div>
         </div>
@@ -114,35 +120,28 @@
     </div>
   </div>
   <script>
-    // Obtén una referencia al botón y al span
     const toggleButton = document.getElementById('toggleButton');
     const toggleIcon = document.getElementById('toggleIcon');
 
-    // Agrega un manejador de eventos para el clic en el botón
     toggleButton.addEventListener('click', function () {
-      // Verifica el estado actual del span
+
       if (toggleIcon.classList.contains('navbar-toggler-icon')) {
-        // Si el span tiene la clase 'navbar-toggler-icon', cámbiala
         toggleIcon.classList.remove('navbar-toggler-icon');
-        // Puedes agregar otro ícono o texto al span
         toggleIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">\n' +
           '  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>\n' +
-          '</svg>'; // Ícono "X" más grande
+          '</svg>';
       } else {
         toggleIcon.innerHTML = '';
 
-        // Si el span no tiene la clase 'navbar-toggler-icon', restablécela
         toggleButton.click();
 
         toggleIcon.classList.add('navbar-toggler-icon');
-        // Puedes restaurar el ícono original
       }
     });
 
 
   </script>
   <script>
-    // Detener el intervalo del carrusel después de hacer clic en una flecha
     $('#carouselExample').on('slide.bs.carousel', function () {
       $(this).carousel('pause');
     });
