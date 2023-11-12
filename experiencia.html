@@ -12,7 +12,19 @@
     <title>Experiencia</title>
 </head>
 <body class="bg-grey">
-
+    <style>
+        .carousel-inner {
+          display: flex;
+          flex-wrap: nowrap;
+        }
+    
+        .card {
+          flex: 0 0 auto;
+          width: 300px;
+          margin-right: 10px;
+          box-sizing: border-box;
+        }
+      </style>
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand pt-4 font-weight-bold pl-3 animate__animated animate__fadeInLeft" href="#">Experiencia</a>
     <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
@@ -45,9 +57,57 @@
         </ul>
     </div>
 </nav>
-<div>
-
-</div>
+<div class="container d-flex align-items-center justify-content-center">
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active py-3  ">
+          <h2 class="text-center mb-4">
+            <a class="arrow arrow-prev" href="#carouselExample" role="button" data-slide="prev">&lt;</a>
+            Microsoft
+            <a class="arrow arrow-next" href="#carouselExample" role="button" data-slide="next">&gt;</a>
+          </h2>
+          <div class="card p-3">
+            <p><b>Cargo:</b> Administrador de Sistemas </p>
+            <p><b>Años:</b> 2020 - 2021</p>
+            <div>
+              <p><b>Descripción:</b></p>
+              <p class="card-text "> Administrador de Sistemas con experiencia en Microsoft, especializado en la gestión eficiente de infraestructuras tecnológicas. Destacado por su contribución al rendimiento y seguridad de sistemas operativos Windows. Proactivo y orientado a resultados.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item  py-3">
+          <h2 class="text-center mb-4">
+            <a class="arrow arrow-prev" href="#carouselExample" role="button" data-slide="prev">&lt;</a>
+            Google
+            <a class="arrow arrow-next" href="#carouselExample" role="button" data-slide="next">&gt;</a>
+          </h2>
+          <div class="card p-3">
+            <p><b>Cargo:</b> Administrador de Bases de datos </p>
+            <p><b>Años:</b> 2021 - 2021</p>
+            <div>
+              <p><b>Descripción:</b></p>
+              <p class="card-text "> Administrador de base de datos de los servidores de Europa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item  py-3">
+          <h2 class="text-center mb-4">
+            <a class="arrow arrow-prev" href="#carouselExample" role="button" data-slide="prev">&lt;</a>
+            Apple
+            <a class="arrow arrow-next" href="#carouselExample" role="button" data-slide="next">&gt;</a>
+          </h2>
+          <div class="card p-3">
+            <p><b>Cargo:</b> Desarrollador web </p>
+            <p><b>Años:</b> 2022 - ACTUALMENTE</p>
+            <div>
+              <p><b>Descripción:</b></p>
+              <p class="card-text ">Desarrollador web en Apple, trabajo con React y CSS en proyectos internos de la empresa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <script>
     // Obtén una referencia al botón y al span
     const toggleButton = document.getElementById('toggleButton');
@@ -76,6 +136,12 @@
 
 
 </script>
+<script>
+    // Detener el intervalo del carrusel después de hacer clic en una flecha
+    $('#carouselExample').on('slide.bs.carousel', function () {
+      $(this).carousel('pause');
+    });
+  </script>  
 <script src="./node_modules/jquery/dist/jquery.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="./node_modules/popper.js/dist/umd/popper.js"></script>
